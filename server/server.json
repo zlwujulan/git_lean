@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "prize",
+      "script": "./app.js",
+      "watch": false,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss.SSS",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "error_file": "./logs/combined.log",
+      "out_file": "./logs/combined.log",
+      "env": {
+        "PORT": 8888,
+        "NODE_ENV": "local"
+      },
+      "env_prod": {
+        "NODE_ENV": "prod",
+        "PORT": 8888
+      }
+    }
+  ]
+}

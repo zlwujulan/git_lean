@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit"/>
+    <meta name="author" content="JSRun">
+    <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>FrontEnd</title>
+    <!--<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>-->
+    <script src="./javascripts/jquery.svg3dtagcloud.min.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: #333;
+        }
+
+        .banner {
+            height: 600px;
+            background: #333;
+            color: #fff
+        }
+
+        .banner .brand {
+            width: 100%;
+            margin: auto;
+            padding-top: 15px;
+            position: relative;
+        }
+
+        @media (min-width: 678px) {
+            .banner .brand {
+                width:1000px;
+                max-width: calc(100% - 140px)
+            }
+        }
+
+        .banner .brand_text {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 5px 8px;
+            font-size: 18px;
+        }
+
+        .banner #tag-cloud {
+            width: 400px;
+            margin: auto
+        }
+
+        .banner .intro {
+            text-align: center;
+            font-size: 24px;
+            color: #F00
+        }
+
+        @media (max-width: 825px) {
+            .hide825 {
+                display:none
+            }
+        }
+
+        @media (max-width: 1155px) {
+            .hide1155 {
+                display:none
+            }
+        }
+
+        #tutorial {
+            font-size: 14px;
+            max-width: none;
+            padding: 0
+        }
+
+
+        #tutorial .container .header a {
+            color: #333
+        }
+
+        #tutorial .container .header img {
+            float: left;
+            width: 60px
+        }
+
+        #tutorial .container .header h1 {
+            float: left;
+            margin-top: 3px;
+            font-size: 30px;
+            margin-left: 12px
+        }
+
+        #tutorial .container .header span {
+            float: left;
+            margin-top: 42px;
+            margin-left: -150px;
+            color: #ccc;
+            font-size: 12px
+        }
+
+        #tutorial .container .header div {
+            width: 469px;
+            height: 60px;
+            float: right;
+            background: #eee
+        }
+
+        #tutorial .container nav {
+            clear: both
+        }
+
+        #tutorial .container .content {
+            clear: both
+        }
+
+        #tutorial .container .content .left {
+            padding-top: 25px;
+            width: 199px;
+            float: left
+        }
+
+        #tutorial .container .content .left .parent {
+            color: #787878
+        }
+
+        #tutorial .container .content .left .parent a {
+            text-decoration: none;
+            color: #787878
+        }
+
+        #tutorial .container .content .left .parent #btn_blue {
+            width: 48px;
+            margin-left: 53px;
+            margin-top: 14px;
+            display: block;
+            color: #43b0f4
+        }
+
+        #tutorial .container .content .left .parent #btn_blue:hover {
+            color: #FFF
+        }
+
+        #tutorial .container .content .left .nav {
+            border-right: 1px dashed #eee
+        }
+
+        #tutorial .container .content .left .nav li {
+            border-bottom: 1px dashed #eee;
+            padding: 10px
+        }
+
+        #tutorial .container .content .left .nav li:first-child {
+            border-top: 1px dashed #eee;
+            margin-top: 15px
+        }
+
+        #tutorial .container .content .left .nav li a {
+            color: #737373;
+            text-decoration: none
+        }
+
+        #tutorial .container .content .left .nav .active {
+            background: #f9f9f9
+        }
+
+        #tutorial .container .content .right {
+            padding-left: 20px;
+            float: right;
+            padding-top: 30px;
+            font-size: 12px
+        }
+
+        @media (min-width: 1156px) {
+            #tutorial .container .content .right {
+                width:780px
+            }
+        }
+
+        @media (max-width: 1155px) {
+            #tutorial .container .content .right {
+                width:100%
+            }
+        }
+
+        #tutorial .container .content .right .slogen {
+            font-size: 20px;
+            margin: 30px
+        }
+
+        #tutorial .categoryList a,#tutorial .tutorialList a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            margin: 20px;
+            font-size: 12px
+        }
+
+        #tutorial .quickGo {
+            padding: 0px 7px
+        }
+
+        #tutorial .quickGo a {
+            margin-left: 10px;
+            padding: 4px 15px;
+            font-size: 12px;
+            text-decoration: none;
+            color: #b1b1b1;
+            border: 1px solid #f7f7f7;
+            border-radius: 17px
+        }
+
+        .intros a {
+            border-bottom: none;
+            color: #cacaca
+        }
+        .btn2 {
+            padding: 10px 30px;
+            border-radius: 27px;
+            color: #fff;
+            font-size: 16px;
+            background: #63e2ff;
+            margin-left: 20px;    text-decoration: none;
+        }
+        .btn1 {
+            border: 1px solid #63e2ff;
+            padding: 10px 30px;
+            border-radius: 27px;
+            color: #63e2ff;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .logo {
+            height: 40px;vertical-align: middle;
+        }
+        /*# sourceMappingURL=tutorial.css.map */
+
+    </style>
+</head>
+<body>
+<div id="tutorial">
+    <div class="banner">
+        <div class="brand">
+            <img src="http://www.shulidata.com/image/logo.png" alt="" class="logo">
+            <div class="brand_text">前端文档</div>
+            <div id="tag-cloud"></div>
+            <div class="intro">
+                <a href="./doc/index.html" class="btn1">开始</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    window.onload = function() {
+        var entries = [
+            {label: '微信小程序', url: 'https://developers.weixin.qq.com/miniprogram/dev/api/', target: '_top'},
+            {label: '支付宝小程序', url: 'https://docs.alipay.com/mini/developer/getting-started', target: '_top'},
+            {label: 'React', url: 'http://react-china.org/', target: '_top'},
+            {label: 'React Native', url: 'https://reactnative.cn/docs/getting-started/', target: '_top'},
+            {label: '苹果开发', url: 'https://developer.apple.com/', target: '_top'},
+            {label: 'Mobx状态管理', url: 'https://cn.mobx.js.org/', target: '_top'},
+            {label: 'Vue.js', url: 'https://cn.vuejs.org/', target: '_top'},
+            {label: 'JavaScript', url: 'http://www.w3school.com.cn/js/', target: '_top'},
+            {label: 'HTML5', url: 'http://www.w3school.com.cn/html5/index.asp', target: '_top'},
+            {label: 'webpack', url: 'https://www.webpackjs.com/', target: '_top'},
+            {label: 'git', url: 'https://git-scm.com/', target: '_top'},
+            {label: 'npm', url: 'https://www.npmjs.com/', target: '_top'},
+            {label: 'ES6', url: 'http://es6.ruanyifeng.com/', target: '_top'},
+            {label: 'CSS3', url: 'http://www.w3school.com.cn/css3/index.asp', target: '_top'},
+            {label: 'LESS', url: 'http://lesscss.cn/', target: '_top'},
+            {label: 'SASS', url: 'https://www.sass.hk/', target: '_top'},
+            {label: 'NodeJs', url: 'http://nodejs.cn/', target: '_top'},
+            {label: 'eslint', url: 'http://eslint.cn/', target: '_top'},
+            {label: 'redux', url: 'http://www.redux.org.cn/', target: '_top'},
+            //http://eslint.cn/
+        ];
+
+        var settings = {
+            entries: entries,
+            width: 400,
+            height: 400,
+            radius: '65%',
+            radiusMin: 75,
+            bgDraw: true,
+            bgColor: '#333',
+            opacityOver: 1.00,
+            opacityOut: 0.05,
+            opacitySpeed: 6,
+            fov: 800,
+            speed: .8,
+            fontFamily: 'Oswald, Arial, sans-serif',
+            fontSize: '15',
+            fontColor: '#fff',
+            fontWeight: 'normal',//bold
+            fontStyle: 'normal',//italic
+            fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+            fontToUpperCase: true
+
+        };
+
+        var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'tag-cloud'  ), settings );
+        //$('#tag-cloud').svg3DTagCloud(settings);
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+.dm-list {
+    margin-top: px2rem(10px);
+
+    input {
+        font-size: px2rem(14px);
+        -webkit-appearance: none;
+        width: 100%;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        height: px2rem(25px);
+        display: block;
+        line-height: px2rem(25px);
+        padding-left: px2rem(5px);
+        padding-right: px2rem(5px);
+    }
+    &.dm-list-form {
+        .dm-list-label {
+            font-size: px2rem(14px);
+            color: #000;
+            text-align: left;
+            min-width: px2rem(68px);
+        }
+        .dm-list-control {
+            @extend %flex-1;
+        }
+        .dm-list-action {
+
+        }
+        .dm-list-clear,.dm-list-eye {
+            margin-left: px2rem(8px);
+            margin-right: px2rem(8px);
+        }
+    }
+}
+.dm-list-item {
+    background-color: #fff;
+    display: block;
+
+    ::-webkit-input-placeholder {
+        color: #ccc;
+        font-size: px2rem(14px);
+    }
+
+    .dm-list-main {
+        @extend %flexbox;
+        @extend %flex-center;
+        margin-left: px2rem(15px);
+        padding-right: px2rem(10px);
+        height: px2rem(52px);
+        border-bottom: 1px solid #D9D9D9;
+    }
+    .dm-list-control {
+        @extend %flex-1;
+        font-size: px2rem(14px);
+        margin-left: px2rem(8px);
+    }
+
+    &:last-child {
+        > .dm-list-main {
+            border: none
+        }
+    }
+}
+

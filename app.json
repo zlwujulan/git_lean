@@ -1,0 +1,36 @@
+{
+    "showDebugPanel": true,
+    "envType": "qa",
+    "proxyTable": {
+        "/xiugou/**": {
+            "target": "https://testapi.sharegoodsmall.com/gateway",
+            "changeOrigin": true,
+            "pathRewrite": {
+                "^/xiugou": ""
+            }
+        },
+        "/v2/**": {
+            "target": "https://api.douban.com",
+            "changeOrigin": true
+        }
+    },
+    "env": {
+        "dev_mock": {
+            "name": "开发mock环境",
+            "host": "http://localhost:9090"
+        },
+        "dev": {
+            "name": "开发环境",
+            "host": "http://172.16.10.253"
+        },
+        "qa": {
+            "name": "测试环境",
+            "host": "https://testapi.sharegoodsmall.com/gateway"
+        },
+        "online": {
+            "name": "生产环境",
+            "host": ""
+        }
+    }
+}
+

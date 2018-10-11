@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px/150% "微软雅黑", "宋体", Arial;
+    color: #333;
+    background: #fff;
+}
+
+a {
+    color: #0000cb;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    padding: 0;
+    margin: 0
+}
+
+#container {
+    border: 1px #656565 solid;
+    margin: 0 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+fieldset {
+    margin: 10px 0;
+    border: #fff solid 1px;
+    border-top-color: #ccc;
+}
+
+legend {
+    margin: 0 0 0 12px;
+    padding: 0 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000
+}
+
+.clause {
+    padding: 8px 15px;
+    margin: 5px
+}
+
+.clause p {
+    font-size: 14px;
+    line-height: 150%;
+    text-indent: 2em;
+    line-height: 150%;
+}
+
+.clause .unline {
+    text-decoration: underline;
+    color: #000
+}
+
+#btn {
+    border-top: 1px solid #ededed;
+    background: #f8f8f8;
+    align: center;
+}
+
+#btn {
+    padding: 10px 5px;
+    text-indent: 0;
+    background: #f8f8f8;
+    border-top: #ededed;
+    border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    text-align: center
+}
+
+#btn input {
+    border: 0;
+    text-indent: 0;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+    width: 100%;
+    border: 1px solid #82a0be;
+    background: -webkit-gradient(linear, 0 0, 0 47%, from(#e4edf6), to(#c6d4e2));
+    background: -moz-linear-gradient(top, #e4edf6, #c6d4e2 47%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-shadow: 1px 1px 0 #fff;
+    text-decoration: none;
+    color: #3c638b;
+    font-weight: bold
+}
+
+#inner-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#inner-table td {
+    padding: 0px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #444;
+}

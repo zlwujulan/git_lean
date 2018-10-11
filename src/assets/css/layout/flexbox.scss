@@ -1,0 +1,28 @@
+.dm-flexbox {
+    @extend %flexbox;
+}
+.dm-flex-1 {
+    @extend %flex-1;
+}
+.dm-flexbox-item {
+
+}
+.dm-flexbox-item:first-child {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.dm-flex-col {
+    box-orient: vertical;
+    flex-direction: column;
+}
+
+.dm-flex-col > .dm-flexbox-item {
+    width: 100%;
+}
+
+.dm-flex-row {
+    box-direction: row;
+    box-orient: horizontal;
+    flex-direction: row;
+}

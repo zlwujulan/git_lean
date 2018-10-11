@@ -1,0 +1,36 @@
+.dm-button {
+    width: 100%;
+    display: inline-block;
+    padding: 0 px2rem(4px);
+    height: px2rem(48px);
+    line-height: px2rem(48px);
+    font-size: px2rem(16px);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: px2rem(5px);
+    -webkit-background-clip: padding-box;
+    text-decoration: none;
+    font-weight: 300;
+    text-decoration: none;
+    transition-duration: .4s;
+    outline: 0;
+    border: 0;
+    -webkit-appearance: none;
+
+    &.primary {
+        background: $color-primary;
+        color: #FFFFFF;
+
+        &:hover {
+            background: lighten($color-primary, 10%);
+        }
+        &:active {
+            background: lighten($color-primary, 10%);
+        }
+        &:disabled {
+            background: #ea88a1;
+        }
+    }
+
+}
+
